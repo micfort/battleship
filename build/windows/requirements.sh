@@ -19,6 +19,10 @@ if [ "$BATTLESHIP_PLATFORM" = "windows64" ]; then
     MXE_TARGET=x86-64-w64-mingw32.static
 fi
 
+echo ============================================================================
+echo mxe-$MXE2_TARGET-qt
+echo ============================================================================
+
 MXE2_TARGET=$(echo "$MXE_TARGET" | sed 's/_/-/g')
 sudo apt-get --yes install \
     mxe-$MXE2_TARGET-qt
