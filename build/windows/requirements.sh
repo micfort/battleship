@@ -9,7 +9,7 @@ sudo apt-key adv --keyserver x-hkp://keys.gnupg.net \
 
 sudo apt-get update
 
-sudo apt-get --yes install upx-ucl
+#sudo apt-get --yes install upx-ucl
 
 if [ "$BATTLESHIP_PLATFORM" = "windows32" ]; then
     MXE_TARGET=i686-w64-mingw32.static
@@ -20,9 +20,6 @@ if [ "$BATTLESHIP_PLATFORM" = "windows64" ]; then
 fi
 
 MXE2_TARGET=$(echo "$MXE_TARGET" | sed 's/_/-/g')
-echo ============================================================================
-echo mxe-$MXE2_TARGET-qt
-echo ============================================================================
 sudo apt-get --yes install \
     mxe-$MXE2_TARGET-qt
 
